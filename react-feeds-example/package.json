@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "getstream": "^4.2.5",
         "react": "^16.9.0",
         "react-activity-feed": "^0.9.22",
         "react-dom": "^16.9.0",
