@@ -12,9 +12,22 @@ class App extends React.Component {
             <
             NotificationDropdown notify / >
             <
-            FlatFeed notify / >
-            <
-            /StreamApp>
+            FlatFeed notify Activity = {
+                (props) => < Activity {...props }
+                Footer = {
+                    () => ( <
+                        div style = {
+                            { padding: '8px 16px' }
+                        } >
+                        <
+                        LikeButton {...props }
+                        />  <
+                        /div >
+                    )
+                }
+            }
+            />  < /
+            StreamApp >
         );
     }
 }
