@@ -1,7 +1,6 @@
 import React from 'react';
-import { StreamApp, NotificationDropdown, FlatFeed } from 'react-activity-feed';
+import { StreamApp, NotificationDropdown, FlatFeed, LikeButton, Activity, CommentField, CommentList } from 'react-activity-feed';
 import 'react-activity-feed/dist/index.css';
-
 
 class App extends React.Component {
     render() {
@@ -12,24 +11,32 @@ class App extends React.Component {
             <
             NotificationDropdown notify / >
             <
-            FlatFeed notify Activity = {
-                (props) => < Activity {...props }
+            FlatFeed options = {
+                { reactions: { recent: true } } }
+            notify Activity = {
+                (props) =>
+                <
+                Activity {...props }
                 Footer = {
                     () => ( <
                         div style = {
-                            { padding: '8px 16px' }
-                        } >
+                            { padding: '8px 16px' } } >
                         <
                         LikeButton {...props }
-                        />  <
-                        /div >
+                        /> <
+                        CommentField activity = { props.activity }
+                        onAddReaction = { props.onAddReaction }
+                        /> <
+                        CommentList activityId = { props.activity.id }
+                        /> <
+                        /div>
                     )
                 }
+                />
             }
-            />  < /
-            StreamApp >
+            /> <
+            /StreamApp>
         );
     }
 }
-
 export default App;
