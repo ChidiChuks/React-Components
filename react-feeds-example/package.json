@@ -3,11 +3,11 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "getstream": "^4.2.5",
+        "getstream": "^8.9.0",
         "react": "^16.9.0",
-        "react-activity-feed": "^0.9.22",
+        "react-activity-feed": "^1.4.0",
         "react-dom": "^16.9.0",
-        "react-scripts": "3.1.1"
+        "react-scripts": "5.0.1"
     },
     "homepage": "https://ChidiChuks.github.io/React-Components.git",
     "scripts": {
